@@ -14,14 +14,12 @@ def queries():
     for book in Book.objects.filter(author=author):
         print(book.title)
 
-    
     library_name = "Main Library"
     library = Library.objects.get(name=library_name)
     print(f"\nBooks in {library.name}:")
     for book in library.books.all():
         print(book.title)
 
-   
     librarian = Librarian.objects.get(library=library)
     print(f"\nLibrarian for {library.name}: {librarian.name}")
 
